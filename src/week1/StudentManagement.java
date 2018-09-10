@@ -1,24 +1,24 @@
-
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.Scanner;
 public class StudentManagement {
 
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
-    Student[] students = new Student[100];
-
+	Student students[];
     public boolean sameGroup(Student s1, Student s2) {
 		String str1 = s1.getGroup();
 		String str2 = s2.getGroup();
         if(str1.equals(str2)) return true;
         return false; 
     } 
-
     void studentsByGroup() {
 	    HashSet<String> Class = new HashSet<String>();
 	    for(Student st: students) {
 	    	Class.add(st.getGroup());
 	    }
 	    for(String Group : Class) {
-	    	System.out.println("Lop"+ Group);
+	    	System.out.println("Lớp"+ Group);
 	    	for(Student st:students) {
 	    		if(st.getGroup()==Group) {
 	    			System.out.println(st.getInfo());
@@ -26,9 +26,13 @@ public class StudentManagement {
 	    	}
 	    }
     }
-
     void removeStudent(String id) {
-        // TODO:
+			for(Student st:students){
+				String str = st.getId();
+				if(!str.equals(id)) System.out.println(st.getInfo());
+			}
+	
+    }
 	public static void main(String args[]){
 		Scanner input = new Scanner(System.in);
 		Student st1 = new Student();
@@ -53,7 +57,19 @@ public class StudentManagement {
 		StudentManagement student = new StudentManagement();
 		if(student.sameGroup(st1, st3)) System.out.println("Cùng lớp");
 		else System.out.println("Không Cùng lớp");
+		//13
+		System.out.print("Nhập số sinh viên: ");
+		int n = Integer.parseInt(input.nextLine());
+		Student students[] = new Student[n];
+		for(int i = 0; i < n; i ++){
+			System.out.println("Nhập sinh viên thứ "+ (i+1));
+			students[i] = new Student();
+			students[i].nhap();
+		}
+		System.out.println("nhập id cần xoa");
+		String id = input.nextLine();
+		StudentManagement s1 = new StudentManagement();
+        s1.removeStudent(id);		
 	}
-
 	
 }

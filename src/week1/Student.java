@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class Student{
 
     // TODO: khai báo các thuộc tính cho Student
@@ -75,4 +75,12 @@ public class Student{
         String s = name + " " + id + " " + group +" " +email;
        return s;
     }
+	 void nhap(){
+		Scanner input = new Scanner(System.in);
+		name = input.nextLine();
+		id = input.nextLine();
+		group = input.nextLine();
+		email = input.nextLine();
+
+	}
 }
