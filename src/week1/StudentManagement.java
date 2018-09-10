@@ -11,21 +11,24 @@ public class StudentManagement {
         if(str1.equals(str2)) return true;
         return false; 
     } 
- /*
+
     void studentsByGroup() {
-		System.out.println("LOP INT22041");
-		for(Student st:students){
-			if(st.getGroup().equals("INT22041"))	System.out.println(st.getInfo());
-		}
-		System.out.println("LOP INT22042");
-		for(Student st:students){
-			if(st.getGroup().equals("INT22042"))	System.out.println(st.getInfo());
-		}
+	    HashSet<String> Class = new HashSet<String>();
+	    for(Student st: students) {
+	    	Class.add(st.getGroup());
+	    }
+	    for(String Group : Class) {
+	    	System.out.println("Lop"+ Group);
+	    	for(Student st:students) {
+	    		if(st.getGroup()==Group) {
+	    			System.out.println(st.getInfo());
+	    		}
+	    	}
+	    }
     }
 
     void removeStudent(String id) {
         // TODO:
-    } */
 	public static void main(String args[]){
 		Scanner input = new Scanner(System.in);
 		Student st1 = new Student();
