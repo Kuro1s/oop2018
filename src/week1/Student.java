@@ -66,12 +66,4 @@ public class Student{
         String s = name + " " + id + " " + group +" " +email;
        return s;
     }
-	 void nhap(){
-		Scanner input = new Scanner(System.in);
-		name = input.nextLine();
-		id = input.nextLine();
-		group = input.nextLine();
-		email = input.nextLine();
-
-	}
 }
