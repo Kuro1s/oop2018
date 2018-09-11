@@ -22,7 +22,7 @@ public class StudentManagement {
 	    for(String Group : List) {
 	    	System.out.println("Class"+ Group);
 	    	for(Student st:students) {
-	    		if(st.getGroup() == (Group)) {
+	    		if(st.getGroup().equals(Group)) {
 	    			System.out.println(st.getInfo());
 	    		}
 	    	}
