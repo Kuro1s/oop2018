@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class StudentManagement {
 
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
-	Student students[];
+	int n;
+	public Student students[] ;
     public boolean sameGroup(Student s1, Student s2) {
 		String str1 = s1.getGroup();
 		String str2 = s2.getGroup();
@@ -72,7 +73,7 @@ public class StudentManagement {
 		//13
 		System.out.print("Nhập số sinh viên: ");
 		int n = Integer.parseInt(input.nextLine());
-		Student students[] = new Student[n];
+		students = new Student[n];
 		for(int i = 0; i < n; i ++){
 			System.out.println("Nhập sinh viên thứ "+ (i+1));
 			students[i] = new Student();
