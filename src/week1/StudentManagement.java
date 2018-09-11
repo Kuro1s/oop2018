@@ -1,21 +1,20 @@
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import java.util.Scanner;
 import java.util.ArrayList;
 //2
 public class StudentManagement {
 //11
     private static ArrayList<Student> students = new ArrayList<Student>(100);
 //9
-    public boolean sameGroup(Student s1, Student s2) {
+    public static boolean sameGroup(Student s1, Student s2) {
 		String str1 = s1.getGroup();
 		String str2 = s2.getGroup();
         if(str1.equals(str2)) return true;
         return false; 
     } 
 //12
-    void studentsByGroup() {
+    public static void studentsByGroup() {
 	    HashSet<String> List = new HashSet<String>();
 	    for(Student st: students) {
 	    	List.add(st.getGroup());
@@ -23,14 +22,14 @@ public class StudentManagement {
 	    for(String Group : List) {
 	    	System.out.println("Class"+ Group);
 	    	for(Student st:students) {
-	    		if(st.getGroup().equals(Group)) {
+	    		if(st.getGroup() == (Group)) {
 	    			System.out.println(st.getInfo());
 	    		}
 	    	}
 	    }
     }
 //13
-    void removeStudent(String id) {
+    public static void removeStudent(String id) {
 		int length = students.size();
 		Student student = null;
 		for(int i = 0; i < length; i++){
@@ -66,6 +65,8 @@ public class StudentManagement {
 		students.add(st2);
 		students.add(st3);
 		students.add(st4);
+		removeStudent("17021567");
+		studentsByGroup();
 //10
 		StudentManagement student = new StudentManagement();
 		if(student.sameGroup(st1, st2)) System.out.println("Cùng lớp");
