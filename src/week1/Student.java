@@ -10,27 +10,18 @@ public class Student{
 		return name;
 	}
 	public void setName(String name){
-		if(name == null || name.isEmpty()){
-			this.name = "Tên không hợp lệ!";
-		}
-		else this.name = name;
+		this.name = name;
 	}
 	public String getId(){
 		return id;
 	}
 	public void setId(String id){
-		if(id == null || id.isEmpty()){
-			this.id = "Id không hợp lệ!";
-		}
-		else this.id = id;
+		this.id = id;
 	}
 	public String getGroup(){return group;}
 	public void setGroup(String group)
 	{
-		if(group == null || group.isEmpty()){
-			this.group = "Group không hợp lệ!";
-		}
-		else this.group = group;
+		this.group = group;
 	}
 	public String getEmail(){return email;}
 	public void setEmail(String email)

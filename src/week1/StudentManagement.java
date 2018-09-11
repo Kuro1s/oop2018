@@ -13,11 +13,11 @@ public class StudentManagement {
         return false; 
     } 
     void studentsByGroup() {
-	    HashSet<String> Class = new HashSet<String>();
+	    HashSet<String> List = new HashSet<String>();
 	    for(Student st: students) {
-	    	Class.add(st.getGroup());
+	    	List.add(st.getGroup());
 	    }
-	    for(String Group : Class) {
+	    for(String Group : List) {
 	    	System.out.println("Lớp"+ Group);
 	    	for(Student st:students) {
 	    		if(st.getGroup()==Group) {
@@ -27,11 +27,23 @@ public class StudentManagement {
 	    }
     }
     void removeStudent(String id) {
-			for(Student st:students){
-				String str = st.getId();
-				if(!str.equals(id)) System.out.println(st.getInfo());
+	/*	int n = students.length;
+		for(int i = 0; i < n; i ++)
+		{
+			if(students[i].getId() == id)
+			{
+				students[i] = students[i+1];
 			}
-	
+			--n;
+		} */
+	    HashSet<Student> List = new HashSet<Student>();
+	    for(Student st: students) {
+	    	List.add(st);
+	    } 
+		for(Student st: List)
+		{
+			if(st.getId() == id) List.remove(st);
+		}
     }
 	public static void main(String args[]){
 		Scanner input = new Scanner(System.in);
