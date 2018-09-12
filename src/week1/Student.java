@@ -30,11 +30,19 @@ public class Student{
 		this.Email = email;
 	}
 	
+<<<<<<< HEAD
     Student() {
     	this.Name = "Student";
     	this.Id = "000";
     	this.Group = "INT22041";
     	this.Email = "uet@vnu.edu.vn";
+=======
+    public Student() {
+    	this.name = "Student";
+    	this.id = "000";
+    	this.group = "INT22041";
+    	this.email = "uet@vnu.edu.vn";
+>>>>>>> 3faae443a8441fb8b019137c6d7618b216ea4485
     }
 
     /**
@@ -43,17 +51,25 @@ public class Student{
      * @param sid
      * @param em
      */
+<<<<<<< HEAD
     Student(String n, String sid, String em) {
         this.Name = n;
         this.Id = sid;
 		this.Group = "INT22041";
         this.Email = em;
+=======
+    public Student(String n, String sid, String em) {
+        this.name = n;
+        this.id = sid;
+        this.email = em;
+>>>>>>> 3faae443a8441fb8b019137c6d7618b216ea4485
     }
 
     /**
      * Constructor 3
      * @param s
      */
+<<<<<<< HEAD
     Student(Student s) {
         this.Name  = s.Name;
         this.Id = s.Id;
@@ -63,6 +79,17 @@ public class Student{
 
     String getInfo() {
         String s = this.Name + " " + this.Id + " " + this.Group +" " + this.Email;
+=======
+    public Student(Student s) {
+        this.name  = s.name;
+        this.id = s.id;
+        this.group = s.group;
+        this.email = s.email;
+    }
+
+    public String getInfo() {
+        String s = name + " " + id + " " + group +" " +email;
+>>>>>>> 3faae443a8441fb8b019137c6d7618b216ea4485
        return s;
     }
 }
