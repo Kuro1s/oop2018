@@ -32,7 +32,7 @@ public class Student{
 		else this.email = email;
 	}
 	
-    Student() {
+    public Student() {
     	this.name = "Student";
     	this.id = "000";
     	this.group = "INT22041";
@@ -45,7 +45,7 @@ public class Student{
      * @param sid
      * @param em
      */
-    Student(String n, String sid, String em) {
+    public Student(String n, String sid, String em) {
         this.name = n;
         this.id = sid;
         this.email = em;
@@ -55,14 +55,14 @@ public class Student{
      * Constructor 3
      * @param s
      */
-    Student(Student s) {
+    public Student(Student s) {
         this.name  = s.name;
         this.id = s.id;
         this.group = s.group;
         this.email = s.email;
     }
 
-    String getInfo() {
+    public String getInfo() {
         String s = name + " " + id + " " + group +" " +email;
        return s;
     }
