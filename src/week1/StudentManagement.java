@@ -1,9 +1,6 @@
 
 import java.util.HashSet;
-<<<<<<< HEAD
-=======
 import java.util.ArrayList;
->>>>>>> 3faae443a8441fb8b019137c6d7618b216ea4485
 //2
 public class StudentManagement {
 //11
@@ -22,27 +19,24 @@ public class StudentManagement {
 	    for(int i = 0; i < Number; i++) {
 	    	StudentGroupList.add(students[i].getGroup());
 	    }
-<<<<<<< HEAD
 	    for(String Group : StudentGroupList) {
 	    	System.out.println("Class: "+ Group);
 	    	for(int i = 0; i < Number; i++) {
 	    		if(students[i].getGroup().equals(Group)) {
 	    			System.out.println(students[i].getInfo());
-=======
+
 	    for(String Group : List) {
 	    	System.out.println("Class"+ Group);
 	    	for(Student st:students) {
 	    		if(st.getGroup()==(Group)) {
 	    			System.out.println(st.getInfo());
->>>>>>> 3faae443a8441fb8b019137c6d7618b216ea4485
 	    		}
 	    	}
 	    }
     }
 
 //13
-<<<<<<< HEAD
-    public void removeStudent(String id) {
+    public static void removeStudent(String id) {
 		int Index = -999;
 		for(int i = 0; i < Number;i ++)
 		{
@@ -50,17 +44,6 @@ public class StudentManagement {
 			{
 				Index = i;
 				break;
-=======
-    public static void removeStudent(String id) {
-		int length = students.size();
-		Student student = null;
-		for(int i = 0; i < length; i++){
-		if(students.get(i).getId().equals( id)){
-			student = students.get(i); 
-			break;
->>>>>>> 3faae443a8441fb8b019137c6d7618b216ea4485
-			}
-		}
 		if(Index != -999)
 		{
 			students[Index] = null;
@@ -89,7 +72,6 @@ public class StudentManagement {
 //8
 		Student st3 = new Student("Hoàng Vũ Việt","17026575","17020778@vnu.edu.vn");
 		Student st4 = new Student(st2);
-<<<<<<< HEAD
 		StudentManagement StudentList = new StudentManagement();
 		StudentList.students[0]=st1;
 		StudentList.students[1]=st2;
@@ -97,14 +79,12 @@ public class StudentManagement {
 		StudentList.students[3]=st4;
 		StudentList.removeStudent("1702151");
 		StudentList.studentsByGroup();
-=======
 		students.add(st1);
 		students.add(st2);
 		students.add(st3);
 		students.add(st1);
 		removeStudent("17021567");
 		studentsByGroup();
->>>>>>> 3faae443a8441fb8b019137c6d7618b216ea4485
 //10
 		StudentManagement student = new StudentManagement();
 		if(student.sameGroup(st1, st2)) System.out.println("Same Class!");
