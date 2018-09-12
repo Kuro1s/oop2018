@@ -7,14 +7,14 @@ public class StudentManagement {
 //11
     private static ArrayList<Student> students = new ArrayList<Student>(100);
 //9
-    public static boolean sameGroup(Student s1, Student s2) {
+    public  boolean sameGroup(Student s1, Student s2) {
 		String str1 = s1.getGroup();
 		String str2 = s2.getGroup();
         if(str1.equals(str2)) return true;
         return false; 
     } 
 //12
-    public static void studentsByGroup() {
+    public  void studentsByGroup() {
 	    HashSet<String> List = new HashSet<String>();
 	    for(Student st: students) {
 	    	List.add(st.getGroup());
@@ -29,7 +29,7 @@ public class StudentManagement {
 	    }
     }
 //13
-    public static void removeStudent(String id) {
+    public  void removeStudent(String id) {
 		int length = students.size();
 		Student student = null;
 		for(int i = 0; i < length; i++){
