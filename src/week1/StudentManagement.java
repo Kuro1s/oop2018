@@ -13,34 +13,21 @@ public class StudentManagement {
         return false; 
     } 
 //12
-   /* public void studentsByGroup() {
-	    HashSet<String> List = new HashSet<String>();
+    public void studentsByGroup() {
+	    HashSet<String> StudentGroupList = new HashSet<String>();
 	    for(int i = 0; i < Number; i++) {
-	    	List.add(students[i].getGroup());
+	    	StudentGroupList.add(students[i].getGroup());
 	    }
-	    for(String Group : List) {
-	    	System.out.println("Class"+ Group);
+	    for(String Group : StudentGroupList) {
+	    	System.out.println("Class: "+ Group);
 	    	for(int i = 0; i < Number; i++) {
 	    		if(students[i].getGroup().equals(Group)) {
 	    			System.out.println(students[i].getInfo());
 	    		}
 	    	}
 	    }
-    }*/
-	    public void studentsByGroup() {
-       HashSet<String> StudentClass = new HashSet<String>();
-	    for(int i=0;i<Number;++i) {
-	    	StudentClass.add(students[i].getGroup());
-	    }
-	    for(String Group : StudentClass) {
-	    	System.out.println("Lop"+ Group);
-	    	for(int i=0;i<Number;++i) {
-	    		if(students[i].getGroup().equals(Group)) {
-	    			System.out.println(students[i].getInfo());
-	    		}
-	    	}
-	    }
     }
+
 //13
     public void removeStudent(String id) {
 		int Index = -999;
@@ -64,6 +51,7 @@ public class StudentManagement {
 	}
 	public static void main(String args[]){
 //6
+
 		Student st1 = new Student();
 		st1.setName("Vũ Việt Hoàng");
 		st1.setId("17020778");
@@ -85,7 +73,7 @@ public class StudentManagement {
 		StudentList.students[1]=st2;
 		StudentList.students[2]=st3;
 		StudentList.students[3]=st4;
-		StudentList.removeStudent("17021567");
+		StudentList.removeStudent("1702151");
 		StudentList.studentsByGroup();
 //10
 		StudentManagement student = new StudentManagement();
@@ -93,5 +81,7 @@ public class StudentManagement {
 		else System.out.println("Not Same Class2");
 		
 	}
+
 	
+
 }

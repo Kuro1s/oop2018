@@ -1,39 +1,40 @@
+package week1;
 
 public class Student{
 
     // TODO: khai báo các thuộc tính cho Student
-	private String name;
-	private String id;
-	private String group;
-	private String email;
+	private String Name;
+	private String Id;
+	private String Group;
+	private String Email;
     public String getName(){
-		return name;
+		return this.Name;
 	}
 	public void setName(String name){
-		this.name = name;
+		this.Name = name;
 	}
 	public String getId(){
-		return id;
+		return this.Id;
 	}
 	public void setId(String id){
-		this.id = id;
+		this.Id = id;
 	}
-	public String getGroup(){return group;}
+	public String getGroup(){return Group;}
 	public void setGroup(String group)
 	{
-		this.group = group;
+		this.Group = group;
 	}
-	public String getEmail(){return email;}
+	public String getEmail(){return this.Email;}
 	public void setEmail(String email)
 	{
-		this.email = email;
+		this.Email = email;
 	}
 	
     Student() {
-    	this.name = "Student";
-    	this.id = "000";
-    	this.group = "INT22041";
-    	this.email = "uet@vnu.edu.vn";
+    	this.Name = "Student";
+    	this.Id = "000";
+    	this.Group = "INT22041";
+    	this.Email = "uet@vnu.edu.vn";
     }
 
     /**
@@ -43,9 +44,10 @@ public class Student{
      * @param em
      */
     Student(String n, String sid, String em) {
-        this.name = n;
-        this.id = sid;
-        this.email = em;
+        this.Name = n;
+        this.Id = sid;
+		this.Group = "INT22041";
+        this.Email = em;
     }
 
     /**
@@ -53,14 +55,14 @@ public class Student{
      * @param s
      */
     Student(Student s) {
-        this.name  = s.name;
-        this.id = s.id;
-        this.group = s.group;
-        this.email = s.email;
+        this.Name  = s.Name;
+        this.Id = s.Id;
+        this.Group = s.Group;
+        this.Email = s.Email;
     }
 
     String getInfo() {
-        String s = name + " " + id + " " + group +" " +email;
+        String s = this.Name + " " + this.Id + " " + this.Group +" " + this.Email;
        return s;
     }
 }
