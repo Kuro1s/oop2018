@@ -1,6 +1,4 @@
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 import java.util.ArrayList;
 //2
 public class StudentManagement {
@@ -22,7 +20,7 @@ public class StudentManagement {
 	    for(String Group : List) {
 	    	System.out.println("Class"+ Group);
 	    	for(Student st:students) {
-	    		if(st.getGroup().equals(Group)) {
+	    		if(st.getGroup()==(Group)) {
 	    			System.out.println(st.getInfo());
 	    		}
 	    	}
@@ -33,7 +31,7 @@ public class StudentManagement {
 		int length = students.size();
 		Student student = null;
 		for(int i = 0; i < length; i++){
-		if(students.get(i).getId() == id){
+		if(students.get(i).getId().equals( id)){
 			student = students.get(i); 
 			break;
 			}
@@ -50,7 +48,6 @@ public class StudentManagement {
 		st1.setId("17020778");
 		st1.setGroup("INT22041");
 		st1.setEmail("hoang9cnd@gmail.com");
-		System.out.println(st1.getName());
 		System.out.println(st1.getInfo());
 //9
 		Student st2 = new Student();
@@ -64,7 +61,7 @@ public class StudentManagement {
 		students.add(st1);
 		students.add(st2);
 		students.add(st3);
-		students.add(st4);
+		students.add(st1);
 		removeStudent("17021567");
 		studentsByGroup();
 //10
