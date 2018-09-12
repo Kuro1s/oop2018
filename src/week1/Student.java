@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 public class Student{
 
     // TODO: khai báo các thuộc tính cho Student
@@ -26,10 +26,7 @@ public class Student{
 	public String getEmail(){return email;}
 	public void setEmail(String email)
 	{
-		if(email == null || email.isEmpty()){
-			this.email = "Group không hợp lệ!";
-		}
-		else this.email = email;
+		this.email = email;
 	}
 	
     Student() {
