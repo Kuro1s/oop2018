@@ -20,23 +20,17 @@ public class StudentManagement {
 	    	StudentGroupList.add(students[i].getGroup());
 	    }
 	    for(String Group : StudentGroupList) {
-	    	System.out.println("Class: "+ Group);
+	    	System.out.println("Class "+ Group +":");
 	    	for(int i = 0; i < Number; i++) {
 	    		if(students[i].getGroup().equals(Group)) {
 	    			System.out.println(students[i].getInfo());
-
-	    for(String Group : List) {
-	    	System.out.println("Class"+ Group);
-	    	for(Student st:students) {
-	    		if(st.getGroup()==(Group)) {
-	    			System.out.println(st.getInfo());
-	    		}
-	    	}
-	    }
-    }
+		}
+			}
+		}
+	}
 
 //13
-    public static void removeStudent(String id) {
+    public void removeStudent(String id) {
 		int Index = -999;
 		for(int i = 0; i < Number;i ++)
 		{
@@ -44,6 +38,8 @@ public class StudentManagement {
 			{
 				Index = i;
 				break;
+			}
+		}
 		if(Index != -999)
 		{
 			students[Index] = null;
@@ -77,18 +73,12 @@ public class StudentManagement {
 		StudentList.students[1]=st2;
 		StudentList.students[2]=st3;
 		StudentList.students[3]=st4;
-		StudentList.removeStudent("1702151");
+		StudentList.removeStudent("17021567");
 		StudentList.studentsByGroup();
-		students.add(st1);
-		students.add(st2);
-		students.add(st3);
-		students.add(st1);
-		removeStudent("17021567");
-		studentsByGroup();
 //10
 		StudentManagement student = new StudentManagement();
 		if(student.sameGroup(st1, st2)) System.out.println("Same Class!");
-		else System.out.println("Not Same Class2");
+		else System.out.println("Not Same Class!");
 		
 	}
 
