@@ -29,17 +29,33 @@ public class Fraction {
 		this.denominator = denominator;
 	}
 	// Getter, Setter: END
-	public void Output(Fraction F){ // Hàm xuất phân số;
-		if(F.numerator == 0 || F.denominator == 1) System.out.println(F.numerator);
-		else if(F.denominator == -1){
-			F.numerator = F.numerator * (-1);
-			System.out.println(F.numerator);
+	public String Output(){ // Hàm xuất phân số;
+		String result = "";
+		if( this.numerator == 0){
+			result = "0";
 		}
-		else if(F.numerator == -F.denominator){
-			System.out.println(-1);
+		else if(this.denominator == 1){
+			result = String.valueOf(this.numerator);
 		}
-		else if(F.numerator == F.denominator)	System.out.println(1);
-		else System.out.println(F.numerator + "/" + F.denominator);
+		else if(this.denominator == -1){
+			this.numerator = this.numerator * (-1);
+			result = String.valueOf(this.numerator);
+		}
+		else if(this.denominator == this.numerator){
+			result = "1";
+		}
+		else if(this.denominator == -this.numerator){
+			result = "-1";
+		}
+		else if(this.denominator < 0 && this.numerator > 0){
+			this.numerator = this.numerator * (-1);
+			this.denominator = this.denominator * (-1);
+			result = String.valueOf(this.numerator) + "/" + String.valueOf(this.denominator);
+		}
+		else{
+			result = String.valueOf(this.numerator) + "/" + String.valueOf(this.denominator);
+		}
+			return result;
 	}
 	public void minimal_fraction(){ // Hàm tối giản phân số
 		int GCD = Task1.gcd(this.numerator, this.denominator);
