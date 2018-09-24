@@ -97,11 +97,10 @@ public class Fraction {
 		Divide.minimal_fraction();
         return Divide;
     }
-	public int equals(Fraction other){ // Hàm so sánh 2 phân số
+	public boolean equals(Fraction other){ // Hàm so sánh 2 phân số
 		int Temp = (this.numerator*other.denominator) - (this.denominator*other.numerator);
-		if( Temp == 0) return 0;
-		if( Temp > 0) return 1;
-		return -1;
+		if( Temp == 0) return true;
+		return false;
 	}
 
 	public static void main(String args[])
@@ -111,17 +110,19 @@ public class Fraction {
 		Fraction Add = This.add(Other);
 		Fraction Sub = This.subtract(Other);
 		Fraction Mul = This.multiply(Other);
+		Fraction Div = This.divide(Other);
 		System.out.print("Add: ");
 		System.out.println(Add.Output());
 		System.out.print("Subtract: ");
 		System.out.println(Sub.Output());
 		System.out.print("Multiply: ");
 		System.out.println(Mul.Output());
+		System.out.print("Divide: ");
+		System.out.println(Div.Output());
 		// equals
-		System.out.println("Equals Result:");
-		int result = This.equals(Other);
-		if(result == 0) System.out.println(" == ");
-		else if(result == 1) System.out.println(" > ");
-		else System.out.println(" < ");
+		System.out.print("Equals Result:");
+		boolean result = This.equals(Other);
+		if(result == true) System.out.print(" == ");
+		else System.out.print(" != ");
 	}
 }
