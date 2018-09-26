@@ -64,7 +64,7 @@ public class Task3 {
     class MyGirlFriend{
         String Name;
         String Age;
-        public void Angry(){System.out.println("ĐÓN ĐI ĂN!");}
+        public void Angry(){System.out.println("Fuck!");}
         public boolean Appear()
         {
             return false;

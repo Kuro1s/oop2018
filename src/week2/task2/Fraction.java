@@ -97,8 +97,9 @@ public class Fraction {
 		Divide.minimal_fraction();
         return Divide;
     }
-	public boolean equals(Fraction other){ // Hàm so sánh 2 phân số
-		int Temp = (this.numerator*other.denominator) - (this.denominator*other.numerator);
+	public boolean equals(Object obj){ // Hàm so sánh 2 phân số
+    	Fraction Tem= (Fraction)obj;
+		int Temp = (this.numerator*Tem.denominator) - (this.denominator*Tem.numerator);
 		if( Temp == 0) return true;
 		return false;
 	}
