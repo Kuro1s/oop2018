@@ -12,6 +12,11 @@ public class Week3 {
         return Math.max(m, n);
     }
 
+    /**
+     * Chương trình tim min của một mảng
+     * @param array là một mảng
+     * @return min của mảng
+     */
     public static int minOfArray(int[] array) {
         // TODO: Tìm giá trị nhỏ nhất của của một mảng số nguyên (kích thước mảng <= 100 phần tử)
         int min = array[0];
@@ -37,12 +42,5 @@ public class Week3 {
         else if (BMI >= 25 && BMI < 30) result = "Thừa cân";
         else result = "Béo phì";
         return result;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(max(5, 6));
-        System.out.println(calculateBMI(70,50));
-        int[] array = {1,4,5,2,5,6,0,-1};
-        System.out.println(minOfArray(array));
     }
 }
