@@ -38,8 +38,8 @@ public class Week3 {
         String result="";
         double BMI = weight/(height * height);
         if(BMI < 18.5) result = "Thiếu cân";
-        else if(BMI >= 18.5 && BMI < 25) result = "Bình thường";
-        else if (BMI >= 25 && BMI < 30) result = "Thừa cân";
+        else if(BMI >= 18.5 && BMI < 23) result = "Bình thường";
+        else if (BMI >= 23 && BMI < 25) result = "Thừa cân";
         else result = "Béo phì";
         return result;
     }
