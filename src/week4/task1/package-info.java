@@ -84,9 +84,9 @@ class CamSanh extends Cam {
     }
 }
 
-class CamThanPhong extends Cam {
+class CamThanhPhong extends Cam {
     public static void main(String[] args) {
-        CamThanPhong cam = new CamThanPhong();
+        CamThanhPhong cam = new CamThanhPhong();
         cam.setCost("30");
         cam.setDate("2");
         cam.setOrigin("China");
