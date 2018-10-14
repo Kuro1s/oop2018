@@ -43,6 +43,7 @@ public class Fruit {
         CamThanhPhong cam1 = new CamThanhPhong();
         CamSanh cam2 = new CamSanh();
         orange.setClassificationOfOranges("Cam Sanh");
+        System.out.println(orange.getClassificationOfOranges());
         cam1.setPlace("HaNoi");
         System.out.println(cam1.getPlace());
         cam2.setPlace("HaNoi");

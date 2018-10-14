@@ -72,7 +72,7 @@ public class Shape {
         Shape shape = new Shape();
         Rectangle rectangle = new Rectangle();
         Square square = new Square();
-        Circle circle = new Circle();
+        Circle circle = new Circle( 3);
         System.out.println("Diện tích hình chữ nhật: "+ rectangle.getArea());
         System.out.println("Chu vi hình chữ nhật: "+ rectangle.getPerimeter());
         System.out.println("Diện tích hình vuông: "+ square.getArea());

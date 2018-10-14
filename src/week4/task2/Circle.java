@@ -1,7 +1,10 @@
 package week4.task2;
 
+/**
+ * class Circle ke thua class Shapes
+ */
 public class Circle extends  Shape{
-    static final double PI = 3.14159;
+    final static  double PI = 3.14159;
     private double radius;
     /**
      * Hàm tạo không có tham số. Mặc định giá trị của radius = 1.0.
