@@ -1,18 +1,19 @@
 package week10;
 
 import java.util.Scanner;
-
+import java.util.Random;
 public class Task2 {
     /**
      * phương thức sinh số thực ngẫu nhiên
      * @return  một mảng số thực 1000 phần tử
      */
     public double[] inputArray() {
-        double[] ramdom = new double[1000];
+        double[] random = new double[1000];
+        Random  delta = new Random();
         for (int i = 0; i < 1000; i++) {
-            ramdom[i] = Math.random() * 1000 ;
+            random[i] = delta.nextDouble() * 10 ;
         }
-        return ramdom;
+        return random;
     }
 
     /**
