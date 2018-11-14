@@ -22,8 +22,8 @@ public class Task1 {
             }
             while (str.indexOf("public") != -1) {
                 int pstart = str.indexOf("public");
-                int pend = str.indexOf("//end");
-                String temp = str.substring(pstart, pend);
+                int pend = str.indexOf("End");
+                String temp = str.substring(pstart, pend - 2);
                 str = str.substring(pend + 1);
                 List.add(temp);
             }
