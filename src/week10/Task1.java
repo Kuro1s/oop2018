@@ -12,7 +12,7 @@ public class Task1 {
      * @return một danh sách cac xâu là các hàm static có trong file đó
      */
     public List<String> getAllFunctions(String path) {
-        List<String> myList = new ArrayList<>();
+        List<String> List = new ArrayList<>();
         try {
             FileInputStream fin = new FileInputStream(path);
             int i = 0;
@@ -21,13 +21,13 @@ public class Task1 {
                 str += (char) i;
             }
             while (str.indexOf("public") != -1) {
-                int posStart = str.indexOf("public static");
-                int posEnd = str.indexOf("//end");
-                String temp = str.substring(posStart, posEnd);
-                str = str.substring(posEnd + 1);
-                myList.add(temp);
+                int pstart = str.indexOf("public");
+                int pend = str.indexOf("//end");
+                String temp = str.substring(pstart, pend);
+                str = str.substring(pend + 1);
+                List.add(temp);
             }
-            return myList;
+            return List;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -43,9 +43,9 @@ public class Task1 {
     public String findFunctionByName(String name) {
         Task1 task1 = new Task1();
         List<String> myFuctions = task1.getAllFunctions("src/week9/Utils.java");
-        String standarName = name.substring(0, name.indexOf("("));
+        String Name = name.substring(0, name.indexOf("("));
         for (int i = 0; i < myFuctions.size(); i++) {
-            if (myFuctions.get(i).indexOf(standarName) != -1) {
+            if (myFuctions.get(i).indexOf(Name) != -1) {
                 return myFuctions.get(i);
             }
         }
